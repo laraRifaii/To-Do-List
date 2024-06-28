@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css"/>
+    
+    <title>To-Do List</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Navbar -->
+      <nav class="nav">
+         <div class="title">To-do List</div>
+          <ul class="nav__links">
+           <li class="nav-login-btn ">Login</li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--btn btn--show-modal" href="#">
+                Add Task
+              </a>
+            </li>
+          </ul>
+      </nav>
+      </header>
+      <div class="divider"></div>
+        <!-- Form Add Task  -->
+        <div class="modal hidden">
+            <button class="btn--close-modal">&times;</button>
+            <h2 class="modal__header">
+             Add A Task
+            </h2>
+            <form class="modal__form">
+              <label for="Description">Description:</label>
+                <input type="text"id="text"placeholder="description" required/>
+              <label for="dateInput">Date:</label>
+                <input type="date" id="dateInput" name="dateInput" required>
+             <label for="timeInput">Time:</label>
+                <input type="time" id="timeInput" name="timeInput" required>
+              <label>Email Address</label>
+                 <input type="email" id="email" placeholder="email"/>
+              <button class="btn" type="submit">Done &rarr;</button>
+            </form>
+          </div>
+         <div class="overlay hidden"></div>
+          
+     <!-- rendering  -->
+      <!-- <div class="tasks ">
+       <div class="container">
+        <div class="example">
+            <div class="titles">
+               <h1>Task</h1>
+               <span>description...</span>
+                <ul class="info">
+                  <li>Date:</li>
+                  <li>Time:</li>
+                  <li>Status</li>
+            </ul>
+           </div>  
+        </div>
+        <div class="example">
+            <div class="titles">
+                <h1>Task</h1>
+            <span>description</span>
+            <ul class="info">
+              <li>Date:</li>
+              <li>time:</li>
+              <li>Status</li>
+
+            </ul>
+            </div>
+        </div>
+        <div class="example">
+            <div class="titles">
+            <h1>Task</h1>
+            <span>description</span>
+            <ul class="info">
+              <li>Date:</li>
+              <li>time:</li>
+              <li>Status</li>
+            </ul>
+            </div>
+        </div>
+        <div class="example">
+            <div class="titles">
+            <h1>Task</h1>
+            <span>description</span>
+            <ul class="info">
+              <li>Date:</li>
+              <li>time:</li>
+              <li>Status</li>
+            </ul>
+            </div>
+        </div> <div class="example">
+            <div class="titles">
+            <h1>Task</h1>
+            <span>description</span>
+            <ul class="info">
+              <li>Date:</li>
+              <li>time:</li>
+              <li>Status</li>
+            </ul>
+            </div>
+        </div> <div class="example">
+            <div class="titles">
+            <h1>Task</h1>
+            <span>description</span>
+            <ul class="info">
+              <li>Date:</li>
+              <li>time:</li>
+              <li>Status</li>
+            </ul>
+            </div>
+        </div> 
+       </div> -->
+     
+    <script defer src="scripts/script.js"></script>
+</body>
+</html>
