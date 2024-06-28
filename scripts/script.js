@@ -10,7 +10,6 @@ const openModal = function (e) {
   overlay.classList.remove("hidden");
 };
 
-
 //close form
 const closeModal = function () {
   modal.classList.add("hidden");
@@ -33,6 +32,7 @@ overlay.addEventListener("click", closeModal);
 // overlay.insertAdjacentHTML("afterend", html);
 // })
 submit.addEventListener("click", render_task);
+
 function render_task(e) {
   e.preventDefault();
   const taskDescription = document.getElementById("text").value;
@@ -63,6 +63,10 @@ function render_task(e) {
   modal.insertAdjacentHTML("afterend", html);
   closeModal();
 }
+
 //minimum date input
-const today = new Date().toISOString().split('T')[0];
-document.getElementById('date').setAttribute('min', today);
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("date").setAttribute("min", today);
+
+
+
