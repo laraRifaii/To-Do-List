@@ -10,6 +10,8 @@ const openModal = function (e) {
   overlay.classList.remove("hidden");
 };
 
+
+//close form
 const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -32,14 +34,14 @@ overlay.addEventListener("click", closeModal);
 // })
 submit.addEventListener("click", render_task);
 function render_task(e) {
-    e.preventDefault();
-    const taskDescription = document.getElementById("text").value;
-    const date = document.getElementById("dateInput").value;
-    const time = document.getElementById("timeInput").value;
-     let html = `
+  e.preventDefault();
+  const taskDescription = document.getElementById("text").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("timeInput").value;
+  let html = `
       <div class="tasks ">
        <div class="container">
-        <div class="example">
+         <div class="example">
             <div class="titles">
                <h1>Task</h1>
                <span>⚡️ ${taskDescription}</span>
@@ -47,11 +49,20 @@ function render_task(e) {
                   <li>📅 ${date}</li>
                   <li>⏱ ${time}</li>
                   <li>⭕ Pending</li>
+                  
+                  
             </ul>
-           </div>  
+             <div class="check">
+                 <label for="Checkbox" class="checked">✅Completed? Check here &rarr;</label>
+                 <input type="checkbox" id="myCheckbox" >
+              </div>
+          </div>  
+          </div>
         </div>
    `;
   modal.insertAdjacentHTML("afterend", html);
- closeModal();
-
+  closeModal();
 }
+//minimum date input
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('date').setAttribute('min', today);
